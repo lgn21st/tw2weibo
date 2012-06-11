@@ -1,2 +1,3 @@
-class MyTwitter < Ohm
+class MyTwitter < Ohm::Model
+
 end

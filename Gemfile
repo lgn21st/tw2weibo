@@ -9,3 +9,4 @@ gem 'weibo'
 
 # test
 gem 'rspec'
+gem 'debugger'

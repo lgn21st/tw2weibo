@@ -1,6 +1,8 @@
 require File.join(File.dirname(__FILE__), '..', 'config', 'environment')
 require 'rack/test'
 
+Ohm.connect :port => 6380
+
 module RSpecMixin
   include Rack::Test::Methods
 
@@ -9,4 +11,7 @@ module RSpecMixin
   end
 end
 
-RSpec.configure { |c| c.include RSpecMixin }
+RSpec.configure do |c|
+  c.include RSpecMixin
+  c.before(:each) { Ohm.flush }
+end
