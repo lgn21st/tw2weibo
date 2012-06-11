@@ -30,9 +30,7 @@ describe MyWeibo do
         MyWeibo.fetch.authorize_url('callbak_url')
 
         my_weibo = MyWeibo.fetch
-        my_weibo.request_token.should_not be_nil
         my_weibo.request_token.should == 'mock_token'
-        my_weibo.request_secret.should_not be_nil
         my_weibo.request_secret.should == 'mock_secret'
       end
 
@@ -58,9 +56,7 @@ describe MyWeibo do
         MyWeibo.fetch.auth('fake_oauth_verifier')
 
         my_weibo = MyWeibo.fetch
-        my_weibo.oauth_token.should_not be_nil
         my_weibo.oauth_token.should == 'mock_token'
-        my_weibo.oauth_secret.should_not be_nil
         my_weibo.oauth_secret.should == 'mock_secret'
       end
     end

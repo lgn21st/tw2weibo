@@ -1,0 +1,9 @@
+development:
+  twitter_consumer_key: 'your_consumer_key'
+  twitter_consumer_secret: 'your_consumer_secret'
+test:
+  twitter_consumer_key: 'your_consumer_key'
+  twitter_consumer_secret: 'your_consumer_secret'
+production:
+  twitter_consumer_key: 'your_consumer_key'
+  twitter_consumer_secret: 'your_consumer_secret'

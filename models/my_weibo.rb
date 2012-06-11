@@ -1,12 +1,12 @@
 class MyWeibo < Ohm::Model
+
+  include BaseModel
+
   attribute :request_token
   attribute :request_secret
   attribute :oauth_token
   attribute :oauth_secret
-
-  def self.fetch
-    all.first || create
-  end
+  attribute :connect
 
   def authorize_url(callback_url)
     oauth = Weibo::OAuth.new(Weibo::Config.api_key, Weibo::Config.api_secret)
@@ -26,6 +26,7 @@ class MyWeibo < Ohm::Model
 
     self.oauth_token = access_token.token
     self.oauth_secret = access_token.secret
+    self.connect = 'true'
     self.save
   end
 end

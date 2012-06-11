@@ -1,3 +1,11 @@
-<a href="/connect?provider=twitter">Connect to Twitter</a>
+<% if my_twitter.connect? %>
+  <a href="/disconnect?provider=twitter">Disconnect to Twitter</a>
+<% else %>
+  <a href="/connect?provider=twitter">Connect to Twitter</a>
+<% end %>
 <br/>
-<a href="/connect?provider=weibo">Connect to Weibo</a>
+<% if my_weibo.connect? %>
+  <a href="/disconnect?provider=weibo">Disonnect to Weibo</a>
+<% else %>
+  <a href="/connect?provider=weibo">Connect to Weibo</a>
+<% end %>
