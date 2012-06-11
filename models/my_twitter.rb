@@ -1,0 +1,2 @@
+class MyTwitter < Ohm
+end
