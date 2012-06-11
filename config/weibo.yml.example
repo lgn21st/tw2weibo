@@ -1,0 +1,9 @@
+development:
+  api_key: '2808780302'
+  api_secret: 'aeb798a256521a7af014b8829b134fcc'
+test:
+  api_key:
+  api_secret:
+production:
+  api_key:
+  api_secret:

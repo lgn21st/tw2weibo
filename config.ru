@@ -1,7 +1,2 @@
-require 'rubygems'
-require 'bundler/setup'
-
-require 'sinatra/base'
-
-require File.join(File.dirname(__FILE__), 'my_app')
+require File.join(File.dirname(__FILE__), 'config', 'environment')
 run MyApp
